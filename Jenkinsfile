@@ -9,6 +9,7 @@ pipeline {
     stage('docker build and push') {
       steps {
         sh '''
+        git clone https://github.com/bbaejisoo/echo-ip.git .
         docker build -t bbaejisoo/echo-ip .
         docker push bbaejisoo/echo-ip
         '''
